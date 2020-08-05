@@ -1,0 +1,28 @@
+{
+    "name": "soswapp/faderbox.soswapp",
+    "description": "7 OS Web - FaderBox plugin",
+    "keywords": ["css", "javascript","7","seven","os","web","fader", "box"],
+    "homepage": "https://github.com/soswapp/faderbox.soswapp",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ikechukwu Okalia",
+            "email": "dev@ikechukwuokalia.com"
+        },
+        {
+            "name": "Tym Frontiers Ltd.",
+            "email": "dev@tymfrontiers.com"
+        }
+    ],
+    "require": {
+      "soswapp/jquery.soswapp" : ">=0.1@stable",
+      "soswapp/theme.soswapp" : ">=0.1@stable",
+      "soswapp/js-generic.soswapp" : ">=0.1@stable",
+      "soswapp/plugin.soswapp" : ">=0.1@stable"
+    },
+    "require-dev": {},
+    "autoload": {
+        "psr-4": {}
+    }
+}

@@ -1,0 +1,19 @@
+{
+  "php-constant" : [],
+  "php-variable" : [
+  ],
+  "php-include" : [],
+  "database-mysql" : {
+    "database" : [],
+    "table" : [],
+    "user" : ["MODERATOR","GUEST"]
+  },
+  "package" : [],
+  "script-js" : [
+    {
+      "jquery/jquery" : "",
+      "soswapp/them.soswapp" : ""
+    }
+  ],
+  "script-css" : []
+}
