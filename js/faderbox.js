@@ -65,9 +65,9 @@ sos.faderBox = {
             if( options.overlay || options.showLoader ) faderBox.close(vi);
           }
         },
-        error: function(xhr){
+        error: function(xhr, text){
           faderBox.close(vi);
-          alert(`<h2>[5.1]: Error (${xhr.responseText}) </h2> <p>Failed to load requested recources.</p>`,{type:'error'});
+          alert(`<h2>[5.1]: Error: (${xhr.status}) ${xhr.statusText} </h2> <p>Failed to load requested recources.</p>`,{type:'error'});
         }
       });
     };
