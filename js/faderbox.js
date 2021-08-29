@@ -77,19 +77,25 @@ sos.faderBox = {
       doFetch();
     }
   },
-  close : function(index = $('.sos-fbx-overlay').last().data().index){
-    let fader = $(document).find(`#sos-fbx-wrp-${index}`);
-    if( fader.length > 0 ){
-      fader.animate({opacity:0},250,function(){
-        fader.remove();
-        if ($(".sos-fbx-overlay").length <= 0) $('body').removeClass('no-scroll');
-      });
+  close : function(index){
+    index = index ? index : ($(document).find('.sos-fbx-overlay').length ? $('.sos-fbx-overlay').last().data().index : false);
+    if (index !== false) {
+      let fader = $(document).find(`#sos-fbx-wrp-${index}`);
+      if( fader.length > 0 ){
+        fader.animate({opacity:0},250,function(){
+          fader.remove();
+          if ($(".sos-fbx-overlay").length <= 0) $('body').removeClass('no-scroll');
+        });
+      }
     }
   },
-  removeLoader : function(index = $('.sos-fbx-overlay').last().data().index) {
-    let loader = $(document).find(`.sos-fbx-overlay:eq(${index})`).children(`.sos-fbx-loader`);
-    if( loader.length > 0 ){
-      loader.animate({opacity:0},250,function(){ loader.remove(); });
+  removeLoader : function(index) {
+    index = index ? index : ($(document).find('.sos-fbx-overlay').length ? $('.sos-fbx-overlay').last().data().index : false);
+    if (index !== false) {
+      let loader = $(document).find(`.sos-fbx-overlay:eq(${index})`).children(`.sos-fbx-loader`);
+      if( loader.length > 0 ){
+        loader.animate({opacity:0},250,function(){ loader.remove(); });
+      }
     }
   },
   disableExit : function ( index = $('.sos-fbx-overlay').last().data().index) {
